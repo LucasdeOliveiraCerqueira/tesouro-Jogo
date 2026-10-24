@@ -56,4 +56,43 @@ caca-ao-tesouro/
 
 ## 🚀 Executando localmente
 
-1. Clone o re
+1. Clone o repositório ou baixe os arquivos.
+2. Abra a pasta no VS Code.
+3. Inicie o projeto utilizando a extensão Live Server.
+4. Acesse o endereço local fornecido pela extensão.
+5. Abra o console do navegador para verificar o registro do Service Worker.
+
+> O PWA deve ser testado em `localhost` ou em um endereço HTTPS. Abrir o HTML diretamente pelo sistema de arquivos não permite testar todos os recursos do PWA.
+
+## ☁️ Publicação na Vercel
+
+A Vercel será utilizada para praticar o processo de publicação de um projeto web estático.
+
+Etapas previstas:
+
+1. Versionar o projeto com Git.
+2. Enviar os arquivos para um repositório no GitHub.
+3. Importar o repositório na Vercel.
+4. Configurar o projeto como uma aplicação estática, sem necessidade de build.
+5. Publicar e acessar a aplicação pelo endereço HTTPS gerado.
+6. Testar a instalação do PWA e seu funcionamento offline.
+7. Realizar alterações e acompanhar novos deploys.
+
+## 📱 Testes de PWA
+
+Durante o desenvolvimento, serão verificados:
+
+- Carregamento do Web App Manifest.
+- Registro do Service Worker.
+- Disponibilidade dos arquivos essenciais em cache.
+- Abertura do jogo após o primeiro carregamento, mesmo sem internet.
+- Possibilidade de instalação em navegadores compatíveis.
+- Atualização do cache após novas versões.
+
+## 📚 Finalidade educacional
+
+Este projeto foi criado exclusivamente para fins de estudo e experimentação. O foco está no aprendizado de tecnologias web, na compreensão dos recursos de PWA e na prática de hospedagem e deploy com a Vercel.
+
+## 📄 Licença
+
+Projeto experimental para fins educacionais. 
