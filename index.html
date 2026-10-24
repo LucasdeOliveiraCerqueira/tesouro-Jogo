@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça ao Tesouro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Colete moedas, desvie dos inimigos e supere sua pontuação neste jogo de aventura.">
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images.jpeg" type="image/svg+xml">
+
+</head>
+<body>
+    <main class="jogo">
+        <header>
+            <div>
+                <h1>💎 Caça ao Tesouro</h1>
+                <p>Colete moedas e fuja dos inimigos!</p>
+            </div>
+
+            <div class="placar">
+                <div class="cartao">
+                    <span>PONTUAÇÃO</span>
+                    <strong id="pontos">0</strong>
+                </div>
+
+                <div class="cartao">
+                    <span>VIDAS</span>
+                    <strong id="vidas">❤️❤️❤️</strong>
+                </div>
+            </div>
+        </header>
+
+        <section class="arena">
+            <canvas id="canvas" width="720" height="440"></canvas>
+
+            <div class="sobreposicao" id="telaInicial">
+                <div class="painel">
+                    <div class="icone">🗺️</div>
+                    <h2 id="tituloTela">Sua aventura começa!</h2>
+                    <p id="mensagemTela">
+                        Colete moedas douradas e desvie dos inimigos vermelhos.
+                    </p>
+                    <button id="botaoJogar">COMEÇAR JOGO</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="instrucoes">
+            <span>Movimentação: WASD ou setas do teclado</span>
+            <span>Reiniciar: R</span>
+        </div>
+
+        <div class="controles">
+            <button data-direcao="cima">▲</button>
+            <button data-direcao="esquerda">◀</button>
+            <button data-direcao="baixo">▼</button>
+            <button data-direcao="direita">▶</button>
+        </div>
+    </main>
+</body>
+</html>

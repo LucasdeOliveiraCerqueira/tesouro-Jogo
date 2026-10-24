@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #0b1020;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.jogo {
+    width: 100%;
+    max-width: 760px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(22px, 5vw, 34px);
+    color: #72f1b8;
+}
+
+header p {
+    margin-top: 6px;
+    color: #a5b0ca;
+    font-size: 14px;
+}
+
+.placar {
+    display: flex;
+    gap: 10px;
+}
+
+.cartao {
+    min-width: 90px;
+    padding: 12px 16px;
+    text-align: center;
+    background: #171f35;
+    border: 1px solid #303b57;
+    border-radius: 12px;
+}
+
+.cartao span {
+    display: block;
+    margin-bottom: 5px;
+    color: #9daac7;
+    font-size: 12px;
+}
+
+.cartao strong {
+    font-size: 22px;
+}
+
+.arena {
+    position: relative;
+    overflow: hidden;
+    background: #10192d;
+    border: 2px solid #354564;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px #0006;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sobreposicao {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #080d1bdc;
+    text-align: center;
+}
+
+.sobreposicao.escondido {
+    display: none;
+}
+
+.painel {
+    max-width: 400px;
+}
+
+.icone {
+    margin-bottom: 12px;
+    font-size: 58px;
+}
+
+.painel h2 {
+    margin-bottom: 12px;
+    color: #72f1b8;
+    font-size: 30px;
+}
+
+.painel p {
+    margin-bottom: 22px;
+    color: #c0cbe0;
+    line-height: 1.6;
+}
+
+button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #72f1b8;
+    color: #10192d;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s, background .2s;
+}
+
+button:hover {
+    background: #a0ffd4;
+    transform: translateY(-2px);
+}
+
+.instrucoes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    color: #a5b0ca;
+    font-size: 13px;
+}
+
+.controles {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 180px;
+    margin: 20px auto 0;
+}
+
+.controles button {
+    padding: 15px 0;
+    font-size: 20px;
+    touch-action: none;
+    user-select: none;
+}
+
+.controles button:nth-child(1) {
+    grid-column: 2;
+}
+
+.controles button:nth-child(2) {
+    grid-column: 1;
+}
+
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .placar {
+        width: 100%;
+    }
+
+    .cartao {
+        flex: 1;
+    }
+
+    .controles {
+        display: grid;
+    }
+
+    .instrucoes {
+        line-height: 1.8;
+    }
+}
